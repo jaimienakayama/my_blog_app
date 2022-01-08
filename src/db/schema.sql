@@ -1,0 +1,11 @@
+CREATE DATABASE blogs;
+
+USE blogs;
+
+CREATE TABLE blogs (
+  id INT NOT NULL AUTO_INCREMENT,
+  author VARCHAR(60) NOT NULL,
+  title VARCHAR(60) NOT NULL,
+  body TEXT(1000) NOT NULL,
+  PRIMARY KEY(id)
+)
