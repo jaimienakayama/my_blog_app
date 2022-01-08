@@ -28,7 +28,7 @@ const BlogList = () => {
           </Link>
         ))}
       <div className="show-more">
-        {toShow.length === blogs.length && (
+        {toShow.length === blogs.length && blogs.length > 6 && (
           <button
             className="btn back-to-top-btn"
             onClick={() => {
@@ -39,7 +39,7 @@ const BlogList = () => {
             Back To Top
           </button>
         )}
-        {toShow.length !== blogs.length && (
+        {toShow.length > 5 && toShow.length < blogs.length && (
           <button
             className="btn show-more-btn"
             onClick={() => setMax((prev) => prev + 2)}
